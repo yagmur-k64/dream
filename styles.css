@@ -1,0 +1,15 @@
+main{
+    padding-top: 105px;
+}
+
+
+
+
+video{
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+
+    width: 750px;
+    transform: scale(1, 0.9);
+}
