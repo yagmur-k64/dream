@@ -35,7 +35,7 @@
     height: 0.5rem;
     border-radius: 50%;
     background-color: #fff;
-    opacity: 0.75;
+    opacity: 0.5;
     transition: opacity ease 250ms;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .slider-nav a.active {
-    background-color: #ff5722;
+    background-color: #ac7e00;
     opacity: 1;
 }
 

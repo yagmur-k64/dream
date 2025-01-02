@@ -1,0 +1,21 @@
+.logo-footer{
+    max-width: 185px;
+}
+
+.insta{
+    max-width: 225px;
+}
+
+h8{
+    font-family: 'Cinzel' serif;
+    font-size: 20px;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    background-color: var(--background-grey);
+}
