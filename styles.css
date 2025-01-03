@@ -19,6 +19,7 @@ h4{
     font-weight: 400;
     font-size: 36px;
     margin: 0;
+    color: var(--main-colour);
 }
 
 h2{
@@ -26,18 +27,23 @@ h2{
     font-weight: 500;
     font-size: 48px;
     margin: 0;
+    color: var(--main-colour);
 }
 h3{
     font-family: "Cinzel", serif;
     font-size: 40px;
     font-weight: 200;
+    color: var(--main-colour);
 }
 p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 350;
     font-size: 18px;
     margin: 0;
+    color: var(--main-colour);
 }
+
+
 /* ---------------------------------------------------slideshow------------------------------------- */
 
 /* ---------------------------------------------------video------------------------------------- */
@@ -53,13 +59,63 @@ video{
     width: 750px;
 }
 /* ---------------------------------------------------meet the planner------------------------------------- */
+
+.meet {
+    display: flex;
+    align-items: center; 
+    padding: 140px 100px 200px 120px;
+    gap: 200px;
+}
+
+.text-container-planner {
+    flex: 1; 
+    text-align: left;
+    max-width: 500px;
+}
+
+.text-container-planner p{
+    padding: 15px 0;
+}
+
+.image-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.image-container img {
+    width: 100%; 
+    max-width: 600px;
+    height: auto;
+}
+
 .quote{
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
     margin: 0;
 }
+
+.ontdek{
+    font-family: "Merge-one", sans-serif;
+    font-size: 16px;
+    border: 1px solid var(--main-colour);
+    padding: 15px;
+    margin-top: 10px;
+    color: var(--main-colour);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ontdek:hover {
+    background-color: var(--main-colour); /* Kleur de knop bij hover */
+    color: white; /* Verander de tekstkleur naar wit */
+    border-color: var(--main-colour);
+}
+
 /* ---------------------------------------------------wedding/event------------------------------------- */
+
 .wedding-event{
     margin: 0;
 }
