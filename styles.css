@@ -117,9 +117,55 @@ video{
 /* ---------------------------------------------------wedding/event------------------------------------- */
 
 .wedding-event{
-    margin: 0;
+    width: 100%;
+    height: 685px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
 }
 
+.img-item{
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: filter 0.5s ease;
+    filter: brightness(80%);
+}
+.img-item:first-child{
+    background-image: url(images/wedding.png);
+}
+
+.img-item:last-child{
+    background-image: url(images/event.png);
+}
+
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.img-item:hover{
+    filter: brightness(100%);
+}
+
+.overlay p{
+    color: white;
+}
 /* ---------------------------------------------------portfolio------------------------------------- */
 .portfolio{
     background-color: var(--background-beige);
