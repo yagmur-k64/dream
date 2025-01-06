@@ -49,3 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         playButton.style.display = 'flex';
     });
 
+    // Selecteer de navbar
+    const navbar = document.querySelector('.navbar');
+
+    // Voeg een eventlistener toe voor scrollen
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled'); // Voeg de 'scrolled' class toe als er wordt gescrold
+        } else {
+            navbar.classList.remove('scrolled'); // Verwijder de 'scrolled' class als je terug naar boven scrollt
+        }
+    });
+
