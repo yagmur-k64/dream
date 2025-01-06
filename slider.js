@@ -29,3 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+    const videoWrapper = document.querySelector('.video-wrapper');
+    const video = videoWrapper.querySelector('video');
+    const playButton = videoWrapper.querySelector('.play-button');
+
+    playButton.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            playButton.style.display = 'none'; // Hide the play button when playing
+        } else {
+            video.pause();
+            playButton.style.display = 'flex'; // Show the play button when paused
+        }
+    });
+
+    // Show the play button again when the video ends
+    video.addEventListener('ended', () => {
+        playButton.style.display = 'flex';
+    });
+

@@ -4,14 +4,14 @@
 
 .insta-posts{
     display: flex;
-    gap: 150px;
+    gap: 80px;
     padding: 75px 75px 50px 75px;
     justify-content: center;
     align-items: center;
    
 }
 .insta-post{
-    max-width: 225px;
+    max-width: 200px;
     
 }
 
