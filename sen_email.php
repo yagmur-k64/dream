@@ -1,28 +1,32 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ontvang de ingevoerde gegevens
+    // Ontvang gegevens
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
-    $message = htmlspecialchars($_POST['message']);
+    $event_type = htmlspecialchars($_POST['event_type']);
+    $services = isset($_POST['services']) ? implode(", ", $_POST['services']) : "Geen gekozen";
+    $help_needed = htmlspecialchars($_POST['help_needed']);
+    $extra_info = htmlspecialchars($_POST['extra_info']);
 
-    // Ontvanger e-mailadres (eigenaar van de website)
-    $to = "yagmur.karabulut@live.nl"; // Vervang dit met het e-mailadres van de eigenaar
+    // E-maildetails
+    $to = "yagmur64.karabulut@gmail.com"; // Verander dit naar jouw e-mailadres
     $subject = "Nieuwe Offerte Aanvraag van $name";
-
-    // Opbouw van de e-mail
-    $emailBody = "Naam: $name\n";
-    $emailBody .= "E-mail: $email\n";
-    $emailBody .= "Telefoonnummer: $phone\n";
-    $emailBody .= "Bericht:\n$message\n";
+    $message = "Naam: $name\n";
+    $message .= "E-mail: $email\n";
+    $message .= "Telefoonnummer: $phone\n";
+    $message .= "Type event: $event_type\n";
+    $message .= "Benodigde services: $services\n";
+    $message .= "Waar hulp nodig is: $help_needed\n";
+    $message .= "Extra informatie: $extra_info\n";
 
     $headers = "From: $email";
 
-    // Verstuur de e-mail
-    if (mail($to, $subject, $emailBody, $headers)) {
-        echo "<script>alert('Uw aanvraag is succesvol verzonden!'); window.location.href = 'index.html';</script>";
+    // Verstuur e-mail
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Offerte succesvol verzonden!";
     } else {
-        echo "<script>alert('Er is iets misgegaan. Probeer het opnieuw.'); window.history.back();</script>";
+        echo "Er is een fout opgetreden bij het verzenden.";
     }
 }
 ?>
