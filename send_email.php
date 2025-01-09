@@ -14,7 +14,7 @@ try {
     $mail->Host = 'smtp.gmail.com'; // Gebruik de SMTP-server van Gmail
     $mail->SMTPAuth = true;
     $mail->Username = 'yagmur64.karabulut@gmail.com'; // Jouw Gmail-adres
-    $mail->Password = 'Denizabi'; // Jouw Gmail-wachtwoord of app-wachtwoord
+    $mail->Password = 'auqb prvl cjuz attn'; // Jouw Gmail-wachtwoord of app-wachtwoord
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
