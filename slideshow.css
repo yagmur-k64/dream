@@ -4,6 +4,8 @@
     margin: 0 auto;
 }
 
+
+
 .slider {
     display: flex;
     aspect-ratio: 20/9;
@@ -50,4 +52,28 @@
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+/* -----------------------------wedding/event---------------------- */
+
+.slider-wrapper-wedding {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.slider-wedding {
+    display: flex;
+    aspect-ratio: 3/4;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider-wedding img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
 }

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merge+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D&display=swap');
+
+.intro{
+    margin-top: 100px;
+    background-color: var(--background-beige);
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 60px;
+}
+
+.divider{
+    height: 1px;
+    background: var(--main-colour);
+    border: none;
+    margin: 40px 0;
+    max-width: 100%;
+}
+
+.text-container-intro{
+    justify-content: center;
+    text-align: left;
+    margin: 0 140px;
+    padding: 40px 0 200px 0;
+}
+
+.photo-title{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.highlights{
+    padding-bottom: 80px;
+}
+
+.options{
+    background-color: var(--background-beige);
+    padding-top: 25px;
+    text-align: center;
+}
+
+.kop{
+    margin: 5px auto;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 70px;
+    margin: 60px 140px 0 140px;
+    padding-bottom: 60px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+    object-fit: cover;
+}

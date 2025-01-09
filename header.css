@@ -64,3 +64,8 @@
   .nav-list a:hover::after {
     transform: translateX(-50%) scaleX(1); 
   }
+
+
+  .logo-link::after{
+    content: none !important;
+  }

@@ -225,8 +225,12 @@ p{
     justify-content: center;
     align-items: center;
 }
-.overlay p{
+.overlay a{
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 350;
+    font-size: 18px;
+    margin: 0;
 }
 
 .overlay h1{
