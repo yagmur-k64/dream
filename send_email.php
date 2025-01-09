@@ -1,32 +1,35 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ontvang gegevens
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $event_type = htmlspecialchars($_POST['event_type']);
-    $services = isset($_POST['services']) ? implode(", ", $_POST['services']) : "Geen gekozen";
-    $help_needed = htmlspecialchars($_POST['help_needed']);
-    $extra_info = htmlspecialchars($_POST['extra_info']);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // E-maildetails
-    $to = "yagmur64.karabulut@gmail.com"; // Verander dit naar jouw e-mailadres
-    $subject = "Nieuwe Offerte Aanvraag van $name";
-    $message = "Naam: $name\n";
-    $message .= "E-mail: $email\n";
-    $message .= "Telefoonnummer: $phone\n";
-    $message .= "Type event: $event_type\n";
-    $message .= "Benodigde services: $services\n";
-    $message .= "Waar hulp nodig is: $help_needed\n";
-    $message .= "Extra informatie: $extra_info\n";
+require 'PHPMailer-master/PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
 
-    $headers = "From: $email";
+$mail = new PHPMailer(true);
 
-    // Verstuur e-mail
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Offerte succesvol verzonden!";
-    } else {
-        echo "Er is een fout opgetreden bij het verzenden.";
-    }
+try {
+    // Serverinstellingen
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com'; // Gebruik de SMTP-server van Gmail
+    $mail->SMTPAuth = true;
+    $mail->Username = 'jouw-email@gmail.com'; // Jouw Gmail-adres
+    $mail->Password = 'jouw-email-wachtwoord'; // Jouw Gmail-wachtwoord of app-wachtwoord
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    // Ontvanger en verzender
+    $mail->setFrom('jouw-email@gmail.com', 'Dream Organization');
+    $mail->addAddress('ontvanger@example.com'); // E-mailadres van de ontvanger
+
+    // Inhoud van de e-mail
+    $mail->isHTML(true);
+    $mail->Subject = 'Nieuwe Offerte Aanvraag';
+    $mail->Body = 'Dit is een testmail voor een offerte-aanvraag.';
+    
+    $mail->send();
+    echo 'E-mail is succesvol verzonden!';
+} catch (Exception $e) {
+    echo "E-mail kon niet worden verzonden. Fout: {$mail->ErrorInfo}";
 }
 ?>
