@@ -13,13 +13,13 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com'; // Gebruik de SMTP-server van Gmail
     $mail->SMTPAuth = true;
-    $mail->Username = 'jouw-email@gmail.com'; // Jouw Gmail-adres
-    $mail->Password = 'jouw-email-wachtwoord'; // Jouw Gmail-wachtwoord of app-wachtwoord
+    $mail->Username = 'yagmur64.karabulut@gmail.com'; // Jouw Gmail-adres
+    $mail->Password = 'Denizabi'; // Jouw Gmail-wachtwoord of app-wachtwoord
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
     // Ontvanger en verzender
-    $mail->setFrom('jouw-email@gmail.com', 'Dream Organization');
+    $mail->setFrom('yagmur64.karabulut@gmail.com', 'Dream Organization');
     $mail->addAddress('ontvanger@example.com'); // E-mailadres van de ontvanger
 
     // Inhoud van de e-mail
