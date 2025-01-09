@@ -20,7 +20,7 @@ try {
 
     // Ontvanger en verzender
     $mail->setFrom('yagmur64.karabulut@gmail.com', 'Dream Organization');
-    $mail->addAddress('ontvanger@example.com'); // E-mailadres van de ontvanger
+    $mail->addAddress('yagmur64.karabulut@gmail.com'); // E-mailadres van de ontvanger
 
     // Inhoud van de e-mail
     $mail->isHTML(true);
