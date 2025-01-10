@@ -1,95 +1,101 @@
-.logo-footer{
-    max-width: 185px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merge+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D&display=swap');
 
-.insta-posts{
-    display: flex;
-    gap: 80px;
-    padding: 75px 75px 50px 75px;
-    justify-content: center;
-    align-items: center;
-   
-}
-.insta-post{
-    max-width: 200px;
-    transition: transform 0.3s ease;
-}
-
-.insta-post:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-a{
-    text-decoration: none;
-}
-
-footer{
+footer {
     background-color: var(--background-grey);
-}
-
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Verdeel in 3 kolommen */
+    grid-template-rows: auto auto;
     gap: 20px;
-    flex-wrap: wrap;
-}
-.logo-container{
-    flex: 1;
-    text-align: left;
-    max-width: 185px;
-    margin: 0 0 20px 100px;
-
+    padding: 40px;
+    align-items: start;
+    text-align: center;
 }
 
-
-.buttons{
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.buttons1, .buttons2{
+/* Logo en Quote */
+.logo-container {
     display: flex;
     flex-direction: column;
-    align-items: first baseline;
-    font-family: "Merge-one", sans-serif;
-    font-size: 24px;
-    gap: 10px;
+    align-items: center;
 }
 
-a{
+.logo-footer {
+    max-width: 200px; /* Maak het logo iets compacter */
+    margin-bottom: 10px;
+}
+
+.logo-container h8 {
+    font-size: 14px;
     color: var(--main-colour);
+    margin-top: 10px;
 }
 
-
-.footer-tekst{
-    flex: 1;
-    text-align: center;
-    margin: 20px 0;
-    max-width: 250px;
-    font-family: 'Cinzel' serif;
-    font-size: 20px;
-    color: var(--main-colour);
-    margin-right: 100px;
-}
-
-.icons{
+/* Navigatie */
+.footer-nav ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
-.icons img{
+.footer-nav li {
+    margin: 10px 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--main-colour);
+    font-family: 'Merge-one', sans-serif;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: brown;
+}
+
+/* Instagram posts */
+.footer-instagram {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap; /* Zorg dat het goed werkt op kleinere schermen */
+    gap: 15px; /* Ruimte tussen de afbeeldingen */
+    padding: 10px 0;
+}
+
+.footer-instagram a img {
+    max-width: 150px; /* Maak de Instagram posts kleiner */
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-instagram a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Icons */
+.icons {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icons img {
     max-width: 30px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.icons img:hover{
-    transform: scale(1.05);
+.icons img:hover {
+    transform: scale(1.2);
 }

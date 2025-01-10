@@ -53,7 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ";
 
         $mail->send();
-        echo 'Uw aanvraag is succesvol verzonden! Bedankt voor uw interesse.';
+        // Redirect naar de homepage
+        header('Location: index.html');
+        exit(); // Stop verdere uitvoering na de redirect
     } catch (Exception $e) {
         echo "E-mail kon niet worden verzonden. Fout: {$mail->ErrorInfo}";
     }
