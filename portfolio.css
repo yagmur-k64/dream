@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merge+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D&display=swap');
+
+#portfolio1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-image: url(images/portfolio/review.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    text-align: center;
+}
+
+
+.reviews-content{
+    max-width: 950px;
+    padding: 20px;
+}
+
+
+.reviews-content h6{
+    font-family: "Cinzel", serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: white ;
+    
+}
+
+.review{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    color: white;
+    line-height: 1.2;
+    padding: 70px 0;
+}
+
+.naam{
+    font-size: 20px !important;
+    color: white;
+}
