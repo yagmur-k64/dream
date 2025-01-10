@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Drie gelijke kolommen */
     gap: 20px;
-    background-color: #f8f8f8; /* Achtergrondkleur van de footer */
+    background-color: var(--main-colour); /* Achtergrondkleur van de footer */
     padding: 40px;
     align-items: start;
     text-align: center;
@@ -25,6 +25,7 @@
 }
 .footer-left h8{
     font-size: 20px;
+    color: var(--background-beige);
 }
 
 .footer-logo {
@@ -34,7 +35,7 @@
 
 .footer-slogan {
     font-size: 14px;
-    color: #444;
+    color: var(--background-beige);
     margin-top: 10px;
 }
 
@@ -49,7 +50,7 @@
 
 .social-text {
     font-size: 16px;
-    color: #444;
+    color: var(--background-beige);
     margin-bottom: 15px;
     max-width: 250px;
 }
@@ -82,7 +83,7 @@
 
 .footer-nav a {
     text-decoration: none;
-    color: #444;
+    color: var(--background-beige);
     font-size: 20px;
     font-family: 'Merge-One', sans-serif;
     text-transform: uppercase;
@@ -90,7 +91,7 @@
 }
 
 .footer-nav a:hover {
-    color: #000;
+    color: var(--call-to-action);
 }
 
 /* Rechter sectie: Instagram posts */
