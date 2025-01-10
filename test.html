@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+body{
+    background-color: #030328;
+}    
+
+.scroll-tray{
+    white-space: nowrap;
+}
+
+.scroll-tray div{
+    display: inline-block;
+
+}
+
+.scroll-tray img{
+    border-radius: 0.3rem;
+    margin: 7px 5px;
+    padding: 0;
+    width: 340px;
+}
+
+.scroll-holder{
+    overflow-x: hidden;
+}
+
+.scroll-holder .scroll-tray:first-child{
+    animation: scroll-tray-hero 180s linear infinite;
+}
+
+.scroll-holder .scroll-tray:last-child{
+    animation: scroll-tray-hero 120s linear infinite;
+}
+
+@keyframes scroll-tray-hero{
+    0% {
+        transform: translateX(0)
+    }
+    99.99% {
+        transform: translateX(-7098px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+</style>
+
+</head>
+<body>
+    <section>
+        <div class="scroll-holder">
+            <div class="scroll-tray">
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+            </div>
+
+            <div class="scroll-tray">
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+                <div>
+                    <img src="images/walibi.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
