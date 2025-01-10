@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.slider-nav a');
     const slides = document.querySelectorAll('.slider img'); // Declare slides globally
 
+    slider.style.scrollBehavior = 'smooth';
+
     // Update active nav link based on current visible slide
     slider.addEventListener('scroll', () => {
         let activeIndex = 0;
@@ -25,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault(); // Prevent the browser from scrolling to the href
             const slideIndex = parseInt(link.getAttribute('data-slide'), 10); // Get the slide index
             slides[slideIndex].scrollIntoView({ behavior: 'smooth' });
+            slider.scrollTo({
+                left: slide.offsetLeft, // Scroll to the left position of the target slide
+                behavior: 'smooth', // Enable smooth scrolling
+            });
         });
     });
 

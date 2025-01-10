@@ -8,14 +8,12 @@
     color: white;
     transition: background-color 0.5s ease;
     z-index: 1;
+    padding: 5px 0;
 }
 
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0);
-}
 
 .logo-head{
-    max-width: 185px;
+    max-width: 120px;
     display: block;
   }
 
@@ -24,12 +22,12 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    padding: 10px 115px;
+    padding: 5px 90px;
     margin: 0;
     text-decoration: none;
     font-family: 'Merge One', sans-serif;
     color: white; 
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 5px;
 }
 
@@ -41,7 +39,7 @@
 .nav-list a {
     color: white;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     position: relative;
     transition: color 0.3s;
   }
@@ -69,3 +67,7 @@
   .logo-link::after{
     content: none !important;
   }
+
+  html {
+    scroll-behavior: smooth;
+}
