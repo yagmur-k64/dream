@@ -51,6 +51,11 @@
     padding: 60px;
     align-items: center;
     display: flex;
+    text-align: center;
+}
+
+.form-container h3{
+    padding: 0 auto;
 }
 
 .form-container {
@@ -63,7 +68,7 @@
     margin: auto;
 }
 
-.form-row {
+.form-row, .form-row-l {
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -73,24 +78,13 @@
 .form-row input, 
 .form-row select {
     width: 48%;
-    padding: 10px;
+    padding-top: 10px;    
+    padding-bottom: 10px;
     border: 1px solid #ccc;
 }
-
-/* Multi-select dropdown */
-.multi-select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    max-height: 150px;
-    overflow-y: auto;
-    background: #fff;
+.form-group{
+    width: 96%;
 }
-
-.multi-select label {
-    display: block;
-    margin-bottom: 8px;
-}
-
 /* Tekstvelden */
 textarea {
     width: 100%;
@@ -103,7 +97,7 @@ textarea {
 
 /* Verzenden knop */
 button {
-    width: 100%;
+    width: 25%;
     padding: 12px;
     color: var(--main-colour);
     background-color: white;
@@ -116,4 +110,22 @@ button {
 button:hover {
     background-color: var(--main-colour);
     color: white;
+}
+
+h9{
+    font-family: 'Merge-One', sans-serif;
+    font-size: 12px;
+}
+
+.algemene-voorwaarden{
+    text-align: left;
+}
+
+.form-row-l {
+    padding-top: 10px;    
+    padding-bottom: 10px;
+}
+
+.algemene-voorwaarden a{
+    font-weight: bolder;
 }

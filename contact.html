@@ -54,7 +54,7 @@
     
                 <!-- Telefoonnummer en Type Event -->
                 <div class="form-row">
-                    <input type="text" name="phone" placeholder="Telefoonnummer" required>
+                    <input type="text" name="phone" placeholder="Telefoonnummer*" required>
                     <select name="event_type" required>
                         <option value="" disabled selected>Type event*</option>
                         <option value="bruiloft">Bruiloft</option>
@@ -63,18 +63,25 @@
                         <option value="andere">Andere</option>
                     </select>
                 </div>
-    
-                <!-- Multi-select Dropdown -->
-                <div class="form-group">
-                    <label>Benodigde service van Dream Organization*</label>
-                    <div class="multi-select">
-                        <label><input type="checkbox" name="services[]" value="Wedding planning"> Wedding planning</label>
-                        <label><input type="checkbox" name="services[]" value="Backdrop/bank"> Backdrop/bank</label>
-                        <label><input type="checkbox" name="services[]" value="Deur decoratie"> Deur decoratie</label>
-                        <label><input type="checkbox" name="services[]" value="Tafel decoratie"> Tafel decoratie</label>
-                        <label><input type="checkbox" name="services[]" value="Catering"> Catering</label>
-                        <label><input type="text" name="services[]" placeholder="Anders, namelijk:"> </label>
-                    </div>
+
+                <div class="form-row">
+                    <select name="event_type" required>
+                        <option value="" disabled selected>Benodigde service</option>
+                        <option value="bruiloft">Full wedding/event planning</option>
+                        <option value="verjaardag">Decoratie</option>
+                        <option value="opening">Deur decoratie</option>
+                        <option value="opening">Catering</option>
+                        <option value="andere">Andere</option>
+                    </select>
+                        <select name="event_type" required>
+                            <option value="" disabled selected>Benodigde service</option>
+                            <option value="bruiloft">Full wedding/event planning</option>
+                            <option value="verjaardag">Decoratie</option>
+                            <option value="opening">Deur decoratie</option>
+                            <option value="opening">Catering</option>
+                            <option value="andere">Andere</option>
+                            <option value="andere">Geen</option>
+                        </select>
                 </div>
     
                 <!-- Open Tekstvakken -->
@@ -84,9 +91,17 @@
                 <div class="form-group">
                     <textarea name="extra_info" placeholder="Vertel zo veel mogelijk informatie over jouw droom feest en deel inspiratie.*" required></textarea>
                 </div>
-    
-                <!-- Verzenden -->
-                <button type="submit">Verzenden</button>
+
+                <div class="form-row-l">
+                    <div class="algemene-voorwaarden">
+                        <label>
+                            <input type="checkbox" id="termsCheckbox" required>
+                            <h9>Ik ga akkoord met de <a href="Algemene Voorwaarden voor Offerte.pdf" target="_blank">algemene voorwaarden</a>.</h9>
+                         </label>
+                    </div>
+               
+                    <button type="submit">Verzenden</button>
+                </div>
             </form>
         </div>
     </section>
@@ -133,6 +148,6 @@
 
     </footer>
     <script src="slider.js"></script>
-    
+
 </body>
 </html>
